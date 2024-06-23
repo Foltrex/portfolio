@@ -3,6 +3,10 @@ nav .logo img {
     height: 48px;
 }
 
+nav .hamburger {
+    content: ;
+}
+
 nav ul {
     display: none;
     /* display: flex; */
