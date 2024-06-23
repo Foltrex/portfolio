@@ -1,15 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --primary-purple: #411BB1;
+    --primary-blue: #278CD6;
+    --secondary-purple: #4312AE;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 8px 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav .logo img {
     width: 48px;
     height: 48px;
 }
 
-nav .hamburger {
-    content: ;
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger label {
+    margin-top: 50%;
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: black;
+}
+
+.hamburger label::before,
+.hamburger label::after {
+    position: absolute;
+    background-color: black;
+    content: '';
+    height: 100%;
+    width: 100%;
+}
+
+.hamburger label::before {
+    top: -12px;
+}
+
+.hamburger label::after {
+    top: 12px;
+}
+
+.hamburger input {
+    display: none;
 }
 
 nav ul {
     display: none;
-    /* display: flex; */
     justify-content: flex-end;
 }
 
@@ -17,12 +67,40 @@ nav ul li {
     display: inline;
 }
 
-section.intro {
-    display: flex;
-}
-
-/* delete later */
 section.intro img {
     width: 206px;
     height: 206px;
+    border-radius: 54px;
+    margin-top: 108px;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, var(--secondary-purple) 15%, var(--primary-purple) 21%, var(--primary-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+section.intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+section.intro h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+}
+
+section.intro .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
 }
