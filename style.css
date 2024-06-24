@@ -14,6 +14,10 @@ body {
     margin: 8px 16px;
 }
 
+body > :not(nav) {
+    text-align: center;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -67,11 +71,11 @@ nav ul li {
     display: inline;
 }
 
-section.intro img {
+section#intro img {
     width: 206px;
     height: 206px;
     border-radius: 54px;
-    margin-top: 108px;
+    margin-top: 96px;
 }
 
 .gradient-text {
@@ -81,18 +85,20 @@ section.intro img {
     background-clip: text;
 }
 
-section.intro {
-    text-align: center;
+section#intro {
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-section.intro h1 {
+section#intro h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
 }
 
-section.intro .subtitle {
+section#intro .subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -103,4 +109,19 @@ section.intro .subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 24px;
+}
+
+section#skills {
+    margin-top: 304px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px 40px;
+}
+
+.skill-item img {
+    width: 70px;
+    height: 70px;
 }
