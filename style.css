@@ -116,12 +116,27 @@ section#skills {
 }
 
 .skills-grid {
+    margin: 36px auto 184px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 56px 40px;
 }
 
+.skill-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 .skill-item img {
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vertical-line {
+    background-color: black;
+    position: absolute;
+    height: 376px;
+    width: 4px;
 }
