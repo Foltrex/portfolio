@@ -135,8 +135,34 @@ section#skills {
 }
 
 .vertical-line {
+    margin-top: 45px;
     background-color: black;
-    position: absolute;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
     height: 376px;
     width: 4px;
+}
+
+.dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.dot:nth-child(1) {
+    top: 51px;
+}
+
+.dot:nth-child(2) {
+    top: 187px;
+}
+
+.dot:nth-child(3) {
+    top: 323px;
 }
