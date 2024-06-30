@@ -134,7 +134,52 @@ section#skills {
     object-fit: contain;
 }
 
-.vertical-line {
+.column-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+section#experience .column-flexbox > div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+section#experience .column-flexbox > div:nth-child(odd) {
+    & .job-info {
+        order: 2;
+    }
+
+    & .date {
+        order: 1;
+    }
+}
+
+section#experience .column-flexbox > div:nth-child(even) {
+    & .job-info {
+        order: 1;
+    }
+
+    & .date {
+        order: 2;
+    }
+}
+
+.job-info img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.job-info h2 {
+    font-size: 16px;
+}
+
+.job-info button {
+    font-size: 12px;
+}
+
+/* .vertical-line {
     margin-top: 45px;
     background-color: black;
     position: relative;
@@ -161,8 +206,4 @@ section#skills {
 
 .dot:nth-child(2) {
     top: 187px;
-}
-
-.dot:nth-child(3) {
-    top: 323px;
-}
+} */
