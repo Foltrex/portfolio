@@ -139,15 +139,20 @@ section#skills {
     flex-direction: column;
 }
 
+section#experience .column-flexbox {
+    position: relative;
+}
+
 section#experience .column-flexbox > div {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    align-items: center;
+    gap: 25px;
 }
 
 section#experience .column-flexbox > div:nth-child(odd) {
     & .job-info {
-        order: 2;
+        order: 3;
     }
 
     & .date {
@@ -161,8 +166,23 @@ section#experience .column-flexbox > div:nth-child(even) {
     }
 
     & .date {
-        order: 2;
+        order: 3;
     }
+}
+
+.job-info,
+.date {
+    width: calc(100% / 2 - 16px);
+}
+
+.dot {
+    order: 2;
+    width: 16px;
+    height: 16px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .job-info img {
@@ -177,33 +197,18 @@ section#experience .column-flexbox > div:nth-child(even) {
 
 .job-info button {
     font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #166198;
 }
 
-/* .vertical-line {
-    margin-top: 45px;
+.vertical-line {
     background-color: black;
-    position: relative;
+    position: absolute;
+    z-index: -1;
     margin-left: 50%;
     transform: translateX(-50%);
-    height: 376px;
+    height: 100%;
     width: 4px;
 }
-
-.dot {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-    border: 3px solid black;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.dot:nth-child(1) {
-    top: 51px;
-}
-
-.dot:nth-child(2) {
-    top: 187px;
-} */
