@@ -4,6 +4,12 @@
     --primary-purple: #411BB1;
     --primary-blue: #278CD6;
     --secondary-purple: #4312AE;
+
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
 }
 
 * {
@@ -12,6 +18,7 @@
 
 body {
     margin: 8px 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body > :not(nav) {
@@ -99,14 +106,12 @@ section#intro h1 {
 }
 
 section#intro .subtitle {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: var(--medium);
     margin-top: 2px;
 }
 
 .section-title {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 24px;
 }
@@ -123,8 +128,7 @@ section#skills {
 }
 
 .skill-item {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: var(--light);
     font-size: 14px;
 }
 
@@ -186,8 +190,6 @@ section#experience .column-flexbox > div:nth-child(even) {
 .job-info,
 .date {
     width: calc(100% / 2 - 16px);
-
-    font-family: 'Montserrat', sans-serif;
 }
 
 .dot {
@@ -207,7 +209,7 @@ section#experience .column-flexbox > div:nth-child(even) {
 
 .date {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: var(--semibold);
     color: #166198;
 }
 
@@ -216,14 +218,18 @@ section#experience .column-flexbox > div:nth-child(even) {
     font-size: 16px;
 }
 
-.job-info button {
-    font-size: 12px;
-    font-weight: 400;
+.btn-link {
     background: none;
+    font-family: inherit;
     border: none;
     padding: 0;
     cursor: pointer;
     color: #166198;
+}
+
+.job-info button {
+    font-size: 12px;
+    font-weight: var(--regular);
 }
 
 .vertical-line {
@@ -234,4 +240,84 @@ section#experience .column-flexbox > div:nth-child(even) {
     transform: translateX(-50%);
     height: 100%;
     width: 4px;
+}
+
+section#pet-projects {
+    margin-top: 147px;
+}
+
+section#pet-projects h1 {
+    margin-bottom: 24px;
+}
+
+.project-description,
+.technologies {
+    display: none;
+}
+
+.project {
+    position: relative;
+    padding: 24px;
+}
+
+.project::before,
+.project::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+}
+
+.project:nth-child(odd)::after {
+    bottom: 42px;
+    right: 0;
+    border-right: 3px solid var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+    border-bottom-right-radius: 16px;
+}
+
+.project:nth-child(odd)::before {
+    top: 0;
+    left: 0;
+    border-left: 3px solid var(--primary-purple);
+    border-top: 3px solid var(--primary-purple);
+    border-top-left-radius: 16px;
+}
+
+
+.project:nth-child(even):after {
+    top: 0;
+    right: 0;
+    border-right: 3px solid var(--primary-blue);
+    border-top: 3px solid var(--primary-blue);
+    border-top-right-radius: 16px;
+}
+
+.project:nth-child(even):before {
+    bottom: 42px;
+    left: 0;
+    border-left: 3px solid var(--primary-purple);
+    border-bottom: 3px solid var(--primary-purple);
+    border-bottom-left-radius: 16px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h2 {
+    font-size: 18px;
+    font-weight: var(--medium);
+}
+
+.project button {
+    font-size: 14px;
+    font-weight: var(--regular);
+}
+
+.technologies img {
+    width: 48px;
+    height: 48px;
 }
