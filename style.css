@@ -307,6 +307,7 @@ section#pet-projects h1 {
 .project img {
     width: 100%;
     height: auto;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .project h2 {
@@ -341,21 +342,36 @@ section#contact-me {
     margin-top: 144px;
 }
 
-section#contact-me form button img {
-    width: auto;
-    height: 21px;
-}
-
 section#contact-me input,
-section#contact-me label {
+section#contact-me label,
+section#contact-me textarea {
     display: block;
     text-align: left;
     width: 280px;
     margin: 0 24px;
+
+    font-size: 16px;
+    font-weight: var(--medium);
 }
 
 section#contact-me label {
     margin-top: 24px;
+}
+
+section#contact-me input,
+section#contact-me textarea {
+    border: none;
+    background-color: rgba(141, 127, 183, 0.2);
+    border-radius: 4px;
+}
+
+section#contact-me input {
+    height: 32px;
+}
+
+section#contact-me textarea {
+    height: 80px;
+    resize: none;
 }
 
 section#contact-me button {
@@ -365,5 +381,16 @@ section#contact-me button {
     height: 32px;
     border-radius: 10px;
     color: var(--primary-purple);
+    background-color: transparent;
     border: 1px solid rgb(183, 167, 230);
+    padding: auto;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-size: 18px;
+    font-weight: var(--medium);
+}
+
+section#contact-me form button i {
+    width: auto;
+    height: 22px;
 }
