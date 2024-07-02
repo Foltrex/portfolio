@@ -331,7 +331,7 @@ section#about-me {
 
 section#about-me p {
     margin: 14px auto 0;
-    width: 90%;
+    width: 280px;
     text-align: justify;
     font-size: 16px;
     font-weight: var(--regular);
@@ -344,4 +344,26 @@ section#contact-me {
 section#contact-me form button img {
     width: auto;
     height: 21px;
+}
+
+section#contact-me input,
+section#contact-me label {
+    display: block;
+    text-align: left;
+    width: 280px;
+    margin: 0 24px;
+}
+
+section#contact-me label {
+    margin-top: 24px;
+}
+
+section#contact-me button {
+    display: inline-block;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    border-radius: 10px;
+    color: var(--primary-purple);
+    border: 1px solid rgb(183, 167, 230);
 }
