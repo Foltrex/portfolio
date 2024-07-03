@@ -16,8 +16,7 @@
     margin: 0;
 }
 
-body {
-    margin: 8px 16px;
+body  {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,12 +24,19 @@ body > :not(nav) {
     text-align: center;
 }
 
-nav {
+body > main,
+body > nav,
+body > footer {
+    padding: 0 16px;
+}
+
+.navbar {
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
 }
 
-nav .logo img {
+.navbar .logo img {
     width: 48px;
     height: 48px;
 }
@@ -69,12 +75,12 @@ nav .logo img {
     display: none;
 }
 
-nav ul {
+.navbar ul {
     display: none;
     justify-content: flex-end;
 }
 
-nav ul li {
+.navbar ul li {
     display: inline;
 }
 
@@ -93,7 +99,6 @@ section#intro img {
 }
 
 section#intro {
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +344,7 @@ section#about-me p {
 }
 
 section#contact-me {
-    margin-top: 144px;
+    margin: 144px auto 80px;
 }
 
 section#contact-me input,
@@ -393,4 +398,59 @@ section#contact-me button {
 section#contact-me form button i {
     width: auto;
     height: 22px;
+}
+
+footer {
+    display: flex;
+    gap: 16px;
+    background-color: rgb(237, 231, 255);
+}
+
+footer .brand,
+footer nav {
+    margin: 56px auto 48px;
+}
+
+footer .brand {
+    width: 50%;
+    justify-self: center;
+}
+
+footer .brand .socials {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    font-size: 24px;
+}
+
+footer .brand img {
+    width: 100px;
+    height: auto;
+}
+
+footer nav {
+    width: 50%;
+    justify-self: flex-start;
+    text-align: left;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav h2,
+footer nav ul li {
+    margin-bottom: 4px;
+}
+
+footer nav h2 {
+    font-size: 20px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
 }
