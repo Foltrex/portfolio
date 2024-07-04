@@ -30,10 +30,16 @@ body > footer {
     padding: 0 16px;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
 .navbar {
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo img {
@@ -42,11 +48,11 @@ body > footer {
 }
 
 .hamburger {
+    z-index: 1;
     cursor: pointer;
 }
 
-.hamburger label {
-    margin-top: 50%;
+.hamburger {
     position: relative;
     display: block;
     height: 4px;
@@ -54,34 +60,62 @@ body > footer {
     background-color: black;
 }
 
-.hamburger label::before,
-.hamburger label::after {
+.hamburger::before,
+.hamburger::after {
     position: absolute;
     background-color: black;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
 }
 
-.hamburger label::before {
+.hamburger::before {
     top: -12px;
 }
 
-.hamburger label::after {
+.hamburger::after {
     top: 12px;
 }
 
-.hamburger input {
+input#side-menu {
     display: none;
 }
 
 .navbar ul {
     display: none;
-    justify-content: flex-end;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    /* gap: 60px; */
+    flex-direction: column;
+    background-color: white;
+}
+
+#side-menu:checked + ul {
+    display: flex;
 }
 
 .navbar ul li {
-    display: inline;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul li + li::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: black;
+    margin: 30px auto;
+}
+
+.navbar ul li:first-child {
+    margin-top: 130px;
 }
 
 section#intro img {
@@ -129,6 +163,7 @@ section#skills {
     margin: 36px auto 184px;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(64px, 1fr);
     gap: 56px 40px;
 }
 
@@ -450,7 +485,5 @@ footer nav h2 {
 }
 
 footer nav ul li a {
-    text-decoration: none;
-    color: black;
     font-size: 18px;
 }
