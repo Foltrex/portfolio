@@ -16,6 +16,11 @@
     margin: 0;
 }
 
+html {
+
+    scroll-behavior: smooth;
+}
+
 body  {
     font-family: 'Montserrat', sans-serif;
 }
@@ -40,6 +45,8 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    --navbar-z-index: 1;
 }
 
 .navbar .logo img {
@@ -50,14 +57,13 @@ nav ul li a {
 .hamburger {
     z-index: 1;
     cursor: pointer;
-}
-
-.hamburger {
     position: relative;
     display: block;
     height: 4px;
     width: 40px;
     background-color: black;
+
+    transition: all 0.5s ease-in-out;
 }
 
 .hamburger::before,
@@ -67,6 +73,8 @@ nav ul li a {
     content: "";
     height: 100%;
     width: 100%;
+
+    transition: all 0.5s ease-in-out;
 }
 
 .hamburger::before {
@@ -82,21 +90,40 @@ input#side-menu {
 }
 
 .navbar ul {
-    display: none;
+    display: flex;
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     align-items: center;
-    /* gap: 60px; */
     flex-direction: column;
     background-color: white;
+    transition: all 0.5s ease-in-out;
 }
 
-#side-menu:checked + ul {
-    display: flex;
+#side-menu:checked ~ ul {
+    z-index: var(--navbar-z-index);
+    left: 0;
+}
+
+.hamburger {
+    z-index: calc(var(--navbar-z-index) + 1);
+}
+
+#side-menu:checked ~ .hamburger {
+    background-color: transparent;
+}
+
+#side-menu:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#side-menu:checked ~ .hamburger::after {
+    top: 0;
+    transform: rotate(45deg);
 }
 
 .navbar ul li {
