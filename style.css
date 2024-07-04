@@ -35,6 +35,27 @@ body > footer {
     padding: 0 16px;
 }
 
+dialog {
+    position: fixed;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 16px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+::backdrop {
+    /* background-color: black;
+    opacity: 0.25; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 nav ul li a {
     text-decoration: none;
     color: black;
@@ -233,7 +254,7 @@ section#experience .column-flexbox > div:nth-child(odd) {
         float: left;
     }
 
-    & .date {
+    & > .date {
         text-align: end;
         order: 1;
     }
@@ -248,15 +269,21 @@ section#experience .column-flexbox > div:nth-child(even) {
         float: right;
     }
 
-    & .date {
+    & > .date {
         text-align: start;
         order: 3;
     }
 }
 
 .job-info,
-.date {
+.column-flexbox > div > .date {
     width: calc(100% / 2 - 16px);
+}
+
+.column-flexbox > div > .date {
+    font-size: 16px;
+    font-weight: var(--semibold);
+    color: #166198;
 }
 
 .dot {
@@ -274,15 +301,36 @@ section#experience .column-flexbox > div:nth-child(even) {
     height: 40px;
 }
 
-.date {
-    font-size: 16px;
-    font-weight: var(--semibold);
-    color: #166198;
+.job-info dialog button.close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 20px;
+    padding: 7px;
 }
 
 .job-info h2 {
     font-weight: bold;
     font-size: 16px;
+}
+
+.job-info dialog h2,
+.job-info dialog p.date {
+    text-align: left;
+}
+
+.job-info dialog h2 {
+    font-size: 18px;
+    font-style: var(--medium)
+}
+
+.job-info dialog p.date {
+    font-size: 12px;
+    font-style: var(--light);
+}
+
+.job-info dialog .description {
+    text-align: justify;
 }
 
 .btn-link {
