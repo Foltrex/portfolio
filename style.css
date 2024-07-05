@@ -41,7 +41,7 @@ dialog {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 75%;
     border-radius: 16px;
 }
 
@@ -250,7 +250,7 @@ section#experience .column-flexbox > div:nth-child(odd) {
         order: 3;
     }
 
-    & .job-info img {
+    & .job-info > img {
         float: left;
     }
 
@@ -265,7 +265,7 @@ section#experience .column-flexbox > div:nth-child(even) {
         order: 1;
     }
 
-    & .job-info img {
+    & .job-info > img {
         float: right;
     }
 
@@ -301,6 +301,10 @@ section#experience .column-flexbox > div:nth-child(even) {
     height: 40px;
 }
 
+.job-info dialog {
+    padding: 34px 23px 27px;
+}
+
 .job-info dialog button.close {
     position: absolute;
     right: 8px;
@@ -329,8 +333,45 @@ section#experience .column-flexbox > div:nth-child(even) {
     font-style: var(--light);
 }
 
+.job-info dialog img {
+    width: 40px;
+    height: auto;
+}
+
+.job-info dialog > img {
+    float: left;
+    margin-right: 14px;
+}
+
 .job-info dialog .description {
     text-align: justify;
+    margin-top: 24px;
+    /* make bigger */
+    font-size: 14px;
+}
+
+.job-info dialog h3 {
+    text-align: left;
+    /* make bigger */
+    font-size: 16px;
+    font-weight: var(--medium);
+    margin: 14px auto;
+}
+
+.job-info dialog .technologies {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.job-info dialog .technologies img {
+    width: 30px;
+    height: auto;
+}
+
+.job-info dialog .technologies p.name {
+    font-size: 14px;
+    font-weight: var(--semibold);
 }
 
 .btn-link {
@@ -365,8 +406,8 @@ section#pet-projects h1 {
     margin-bottom: 24px;
 }
 
-.project-description,
-.technologies {
+#pet-projects .project-description,
+#pet-projects .technologies {
     display: none;
 }
 
