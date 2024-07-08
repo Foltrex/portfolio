@@ -5,29 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="common/sections/navbar/navbar.css">
         <script src="https://kit.fontawesome.com/1f4939e33e.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <nav class="navbar">
-            <a class="logo" href=""><img src="images/logo.png" alt=""></a>
+    <body class="page">
+        <nav class="navbar page__navbar">
+            <a class="logo navbar__logo" href="">
+                <img class="logo__image" src="images/logo.png" alt="">
+            </a>
 
-            <input type="checkbox" id="side-menu">
-            <label class="hamburger" for="side-menu"></label>
+            <input class="navbar__toggle" type="checkbox" id="side-menu">
+            <label class="navbar__toggle-button hamburger" for="side-menu"></label>
 
-            <ul>
-                <li><a class="gradient-text" href="#skills">Skills</a></li>
-                <li><a class="gradient-text" href="#experience">Experience</a></li>
-                <li><a class="gradient-text" href="#pet-projects">Projects</a></li>
-                <li><a class="gradient-text" href="#about-me">About Me</a></li>
-                <li><a class="gradient-text" href="#contact-me">Contact Me</a></li>
+            <ul class="menu navbar__menu menu--vertical">
+                <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#skills">Skills</a></li>
+                <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#experience">Experience</a></li>
+                <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#pet-projects">Projects</a></li>
+                <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#about-me">About Me</a></li>
+                <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#contact-me">Contact Me</a></li>
             </ul>
         </nav>
-        <main>
-            <section id="intro">
-                <img src="images/avatar.jpeg" alt="">
-                <div class="description">
-                    <h1 class="gradient-text">Hi, I&#39;m<br>Artem Chernenkov</h1>
-                    <p class="subtitle">Web Developer</p>
+        <!-- <main>
+            <section class="intro">
+                <img class="intro__image" src="images/avatar.jpeg" alt="">
+                <div class="intro__description">
+                    <h1 class="intro__description_title gradient-text">Hi, I&#39;m<br>Artem Chernenkov</h1>
+                    <p class="intro__description_subtitle">Web Developer</p>
                 </div>
             </section>
             <section id="skills">
@@ -196,32 +199,36 @@
                         </div>
                     </dialog>
 
-                    <p class="project-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div class="technologies">
-                        <div>
-                            <img src="images/skill-icons/html.png" alt="HTML icon">
-                            <p class="description">HTML</p>
-                        </div>
-                        <div>
-                            <img src="images/skill-icons/css.png" alt="CSS icon">
-                            <p class="description">CSS</p>
-                        </div>
-                        <div>
-                            <img src="images/skill-icons/react.png" alt="React icon">
-                            <p class="description">React</p>
-                        </div>
-                        <div>
-                            <img src="images/skill-icons/js.png" alt="JS icon">
-                            <p class="description">JS</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="project">
-                    <img src="images/pet-projects/cinema.png" alt="Sample picture">
-                    <h2>Cinema Pet Project</h2>
+                    <img src="images/pet-projects/food.png" alt="Sample picture">
+                    <h2>Food Pet Project</h2>
                     <button class="btn-link">Learn More</button>
+                    <dialog>
+                        <button class="close">✕</button>
+                        <h2 class="gradient-text">Food Pet Project</h2>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="technologies">
+                            <div>
+                                <img src="images/skill-icons/html.png" alt="HTML icon">
+                                <p class="name">HTML</p>
+                            </div>
+                            <div>
+                                <img src="images/skill-icons/css.png" alt="CSS icon">
+                                <p class="name">CSS</p>
+                            </div>
+                            <div>
+                                <img src="images/skill-icons/react.png" alt="React icon">
+                                <p class="name">React</p>
+                            </div>
+                            <div>
+                                <img src="images/skill-icons/js.png" alt="JS icon">
+                                <p class="name">JS</p>
+                            </div>
+                        </div>
+                    </dialog>
 
                     <p class="project-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -290,7 +297,7 @@
                     <li><a href="#contact-me">Contacts</a></li>
                 </ul>
             </nav>
-        </footer>
+        </footer> -->
 
         <script src="script.js"></script>
     </body>
