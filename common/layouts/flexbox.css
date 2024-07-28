@@ -1,0 +1,19 @@
+.flexbox--justify-content-space-around {
+    justify-content: space-around;
+}
+
+.flexbox--justify-content-space-between {
+    justify-content: space-between;
+}
+
+.flexbox--align-items-center {
+    align-items: center;
+}
+
+.flexbox--justify-content-center {
+    justify-content: center;
+}
+
+.flexbox--gap25px {
+    gap: 25px;
+}

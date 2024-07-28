@@ -1,0 +1,21 @@
+
+.page__skills {
+    margin-top: 304px;
+}
+
+.skills__grid {
+    margin: 36px auto 184px;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+/* TOOD: IS IT RIGHT TO MAKE THAT DEPENDENT */
+
+.skills__grid .grid__item {
+    font-weight: var(--light);
+    font-size: 0.9rem;
+}
+
+.skills__grid .grid__item span {
+    margin-top: 4px;
+}

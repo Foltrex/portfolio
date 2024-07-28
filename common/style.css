@@ -2,3 +2,288 @@
     text-decoration: none;
     color: black;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --primary-purple: #411BB1;
+    --primary-blue: #278CD6;
+    --secondary-purple: #4312AE;
+
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body > :not(nav) {
+    text-align: center;
+}
+
+body > main,
+body > nav,
+body > footer {
+    padding: 0 16px;
+}
+
+.dialog {
+    position: fixed;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    border-radius: 16px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flexbox--vertical {
+    flex-direction: column;
+}
+
+::backdrop {
+    /* background-color: black;
+    opacity: 0.25; */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, var(--secondary-purple) 15%, var(--primary-purple) 21%, var(--primary-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+section#pet-projects {
+    margin-top: 147px;
+}
+
+section#pet-projects h1 {
+    margin-bottom: 24px;
+}
+/* 
+#pet-projects .project-description,
+#pet-projects .technologies {
+    display: none;
+} */
+
+.project {
+    position: relative;
+    padding: 24px;
+
+    --project-title-margin-top: 12px
+}
+
+.project::before,
+.project::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 44px;
+    height: 44px;
+}
+
+.project:nth-child(odd)::after {
+    bottom: calc(42px + var(--project-title-margin-top));
+    right: 0;
+    border-right: 3px solid var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+    border-bottom-right-radius: 16px;
+}
+
+.project:nth-child(odd)::before {
+    top: 0;
+    left: 0;
+    border-left: 3px solid var(--primary-purple);
+    border-top: 3px solid var(--primary-purple);
+    border-top-left-radius: 16px;
+}
+
+
+.project:nth-child(even):after {
+    top: 0;
+    right: 0;
+    border-right: 3px solid var(--primary-blue);
+    border-top: 3px solid var(--primary-blue);
+    border-top-right-radius: 16px;
+}
+
+.project:nth-child(even):before {
+    bottom: calc(42px + var(--project-title-margin-top));
+    left: 0;
+    border-left: 3px solid var(--primary-purple);
+    border-bottom: 3px solid var(--primary-purple);
+    border-bottom-left-radius: 16px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project h2 {
+    font-size: 18px;
+    font-weight: var(--medium);
+    margin-top: var(--project-title-margin-top);
+}
+
+.project button {
+    font-size: 14px;
+    font-weight: var(--regular);
+}
+
+.technologies img {
+    width: 48px;
+    height: 48px;
+}
+
+.project dialog h2 {
+
+}
+
+section#about-me {
+    margin-top: 184px;
+}
+
+section#about-me p {
+    margin: 14px auto 0;
+    width: 280px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: var(--regular);
+}
+
+section#contact-me {
+    margin: 144px auto 80px;
+}
+
+section#contact-me input,
+section#contact-me label,
+section#contact-me textarea {
+    display: block;
+    text-align: left;
+    width: 280px;
+    margin: 0 24px;
+
+    font-size: 16px;
+    font-weight: var(--medium);
+}
+
+section#contact-me label {
+    margin-top: 24px;
+}
+
+section#contact-me input,
+section#contact-me textarea {
+    border: none;
+    background-color: rgba(141, 127, 183, 0.2);
+    border-radius: 4px;
+}
+
+section#contact-me input {
+    height: 32px;
+}
+
+section#contact-me textarea {
+    height: 80px;
+    resize: none;
+}
+
+section#contact-me button {
+    display: inline-block;
+    margin-top: 30px;
+    width: 120px;
+    height: 32px;
+    border-radius: 10px;
+    color: var(--primary-purple);
+    background-color: transparent;
+    border: 1px solid rgb(183, 167, 230);
+    padding: auto;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-size: 18px;
+    font-weight: var(--medium);
+}
+
+section#contact-me form button i {
+    width: auto;
+    height: 22px;
+}
+
+footer {
+    display: flex;
+    gap: 16px;
+    background-color: rgb(237, 231, 255);
+}
+
+footer .brand,
+footer nav {
+    margin: 56px auto 48px;
+}
+
+footer .brand {
+    width: 50%;
+    justify-self: center;
+}
+
+footer .brand .socials {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    font-size: 24px;
+}
+
+footer .brand img {
+    width: 100px;
+    height: auto;
+}
+
+footer nav {
+    width: 50%;
+    justify-self: flex-start;
+    text-align: left;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav h2,
+footer nav ul li {
+    margin-bottom: 4px;
+}
+
+footer nav h2 {
+    font-size: 20px;
+}
+
+footer nav ul li a {
+    font-size: 18px;
+}

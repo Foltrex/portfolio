@@ -1,0 +1,18 @@
+.grid {
+    display: grid;
+}
+
+.grid__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid__image {
+    width: 45px;
+    height: auto;
+}
+
+.grid--4-equal-columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}

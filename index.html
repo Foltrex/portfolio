@@ -5,7 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="common/layouts/grid.css">
         <link rel="stylesheet" href="common/sections/navbar/navbar.css">
+        <link rel="stylesheet" href="common/sections/intro/intro.css">
+        <link rel="stylesheet" href="common/sections/skills/skills.css">
+        <link rel="stylesheet" href="common/sections/experience/experience.css">
+
         <script src="https://kit.fontawesome.com/1f4939e33e.js" crossorigin="anonymous"></script>
     </head>
     <body class="page">
@@ -25,7 +30,7 @@
                 <li class="menu__item"><a class="link menu__link menu__link--gradient-text" href="#contact-me">Contact Me</a></li>
             </ul>
         </nav>
-        <!-- <main>
+        <main>
             <section class="intro">
                 <img class="intro__image" src="images/avatar.jpeg" alt="">
                 <div class="intro__description">
@@ -33,59 +38,59 @@
                     <p class="intro__description_subtitle">Web Developer</p>
                 </div>
             </section>
-            <section id="skills">
-                <h1 class="section-title gradient-text">Skill Set</h1>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <img src="images/skill-icons/html.png" alt="HTML icon">
+            <section class="skills page__skills">
+                <h1 class="section-title skills__section-title gradient-text">Skill Set</h1>
+                <div class="grid skills__grid grid--4-equal-columns grid--64px-rows">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/html.png" alt="HTML icon">
                         <span>HTML</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/js.png" alt="JS icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/js.png" alt="JS icon">
                         <span>JS</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/spring.png" alt="Spring icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/spring.png" alt="Spring icon">
                         <span>Spring</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/react.png" alt="React icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/react.png" alt="React icon">
                         <span>React</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/css.png" alt="CSS icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/css.png" alt="CSS icon">
                         <span>CSS</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/java.png" alt="JAVA icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/java.png" alt="JAVA icon">
                         <span>Java</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/postgresql.png" alt="POSTGRES icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/postgresql.png" alt="POSTGRES icon">
                         <span>Postgres</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/sass.png" alt="SASS icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/sass.png" alt="SASS icon">
                         <span>SASS</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/next.png" alt="NextJS icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/next.png" alt="NextJS icon">
                         <span>Next JS</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/git.png" alt="Git icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/git.png" alt="Git icon">
                         <span>Git</span>
                     </div>
-                    <div class="skill-item">
-                        <img src="images/skill-icons/figma.png" alt="Figma icon">
+                    <div class="grid__item">
+                        <img class="grid__image" src="images/skill-icons/figma.png" alt="Figma icon">
                         <span>Figma</span>
                     </div>
                 </div>
             </section>
-            <section id="experience">
-                <h1 class="section-title gradient-text">Experience</h1>
-                <div class="column-flexbox">
-                    <div class="science-soft">
+            <section class="experience">
+                <h1 class="section-title experience__title section-title gradient-text">Experience</h1>
+                <div class="experience__flexbox flexbox flexbox--vertical flexbox--justify-content-space-around column-flexbox">
+                    <div class="flexbox flexbox--justify-content-space-between flexbox--align-items-center science-soft flexbox-gap25">
                         <div class="job-info">
                             <img src="images/company-icons/sciencesoft-logo.png" alt="">
                             <h2>Science Soft</h2>
@@ -123,7 +128,7 @@
                         <div class="dot"></div>
                         <div class="date">2024</div>
                     </div>
-                    <div class="ispirer-systems">
+                    <div class="flexbox flexbox--justify-content-space-between flexbox--align-items-center flexbox-gap25 ispirer-systems">
                         <div class="job-info">
                             <img src="images/company-icons/ispirersystems-logo.png" alt="">
                             <h2>Ispirer Systems</h2>
@@ -163,11 +168,11 @@
                         <div class="dot"></div>
                         <div class="date">2022</div>
                     </div>
-                    <div class="vertical-line">
+                    <div class="experience__vertical-line">
                     </div>
                 </div>
             </section>
-            <section id="pet-projects">
+            <!-- <section id="pet-projects">
                 <h1 class="section-title gradient-text">Pet Projects</h1>
                 <div class="project">
                     <img src="images/pet-projects/travelling.png" alt="Sample picture">
@@ -276,9 +281,9 @@
                         <i class="fa-regular fa-paper-plane"></i>
                     </button>
                 </form>
-            </section>
+            </section> -->
         </main>
-        <footer>
+        <!-- <footer>
             <div class="brand">
                 <img src="images/logo.png" alt="">
                 <div class="socials">
